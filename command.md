@@ -35,8 +35,7 @@ git status
 touch nibba.txt nibbi.txt
 
 # Add files to the Git index
-git add nibbi.txt
-git add nibba.txt
+git add nibbi.txt nibba.txt
 
 # Remove a file from the index but keep it locally
 git rm --cached nibba.txt
@@ -89,3 +88,66 @@ git log --oneline
 
 # Switch back to the master branch
 git checkout master
+
+....................................
+
+# Git and Bash Commands
+
+## Editing and Viewing Files
+- `vim README.md`
+- `vim branching.md`
+- `cat id_ed25519.pub`
+- `cat README.md`
+
+## Directory Navigation
+- `cd`
+- `cd .ssh`
+- `cd github/gitfordevops`
+
+## Listing Files
+- `ls`
+
+## Git Commands
+
+### Remote Management
+- `git remote -v`
+- `git remote set-url origin git@github.com:Dhananjaykatgeri/gitfordevops.git`
+
+### Status Check
+- `git status`
+
+### Staging Changes
+- `git add README.md`
+- `git add branchinh.md`
+- `git add branching.md`
+
+### Committing Changes
+- `git commit -m "added readme"`
+- `git commit -m "added some new changes"`
+- `git commit -m "addedd branching strategy"`
+- `git commit -m "addeddd branching url"`
+
+### Viewing Log
+- `git log`
+- `git log --oneline`
+
+### Branching
+- `git branch`
+- `git checkout -b staging`
+- `git checkout -b dev`
+
+### Merging Branches
+- `git merge dev`
+
+### Pulling and Pushing
+- `git pull origin main`
+- `git push`
+- `git push origin staging`
+- `git push origin dev`
+
+## Key Management
+- `sshkeygen`
+- `ssh-keygen`
+
+## Miscellaneous
+- `clear`
