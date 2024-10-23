@@ -1,0 +1,210 @@
+# Docker Commands and Their Uses
+
+## 1. `docker ps`
+Displays the list of running containers.
+- **Usage**: `docker ps [OPTIONS]`
+- **Options**: 
+  - `-a`: Show all containers (default shows just running).
+  - `-q`: Show only container IDs.
+
+## 2. `docker images`
+Lists all images available on the system.
+- **Usage**: `docker images [OPTIONS]`
+- **Options**:
+  - `-q`: Show only image IDs.
+  - `--filter`: Filter output based on conditions provided.
+
+## 3. `cat /etc/group`
+Shows the group information, useful to check if the user is in the `docker` group.
+- **Usage**: `cat /etc/group`
+- **Options**: None.
+
+## 4. `clear`
+Clears the terminal screen.
+- **Usage**: `clear`
+- **Options**: None.
+
+## 5. `docker pull mysql:latest`
+Downloads the latest MySQL image from Docker Hub.
+- **Usage**: `docker pull [OPTIONS] NAME[:TAG|@DIGEST]`
+- **Example**: `docker pull mysql:latest`
+
+## 6. `docker run -d mysql:latest`
+Runs a MySQL container in detached mode using the latest image.
+- **Usage**: `docker run [OPTIONS] IMAGE [COMMAND] [ARG...]`
+- **Options**:
+  - `-d`: Detached mode: run in the background.
+
+## 7. `docker exec -it`
+Executes a command inside a running container, typically followed by the container ID and a command like `bash`.
+- **Usage**: `docker exec [OPTIONS] CONTAINER COMMAND [ARG...]`
+- **Options**:
+  - `-it`: Interactive mode with a terminal.
+
+## 8. `pwd`
+Prints the current working directory.
+- **Usage**: `pwd`
+- **Options**: None.
+
+## 9. `sudo apt-get remove nginx`
+Correct command to remove Nginx from the system.
+- **Usage**: `sudo apt-get remove [PACKAGE_NAME]`
+- **Example**: `sudo apt-get remove nginx`
+
+## 10. `docker run -d nginx:latest`
+Runs an Nginx container in detached mode using the latest image.
+- **Usage**: `docker run [OPTIONS] nginx:latest`
+- **Options**:
+  - `-d`: Detached mode.
+
+## 11. `docker kill d608a72f9d25`
+Kills the running container with ID `d608a72f9d25`.
+- **Usage**: `docker kill [OPTIONS] CONTAINER [CONTAINER...]`
+- **Example**: `docker kill d608a72f9d25`
+
+## 12. `ls`
+Lists files and directories in the current directory.
+- **Usage**: `ls [OPTIONS] [FILE...]`
+- **Options**:
+  - `-l`: Use a long listing format.
+  - `-a`: Include hidden files.
+
+## 13. `exit`
+Exits the current shell or terminal session.
+- **Usage**: `exit`
+- **Options**: None.
+
+## 14. `whoami`
+Prints the current user’s username.
+- **Usage**: `whoami`
+- **Options**: None.
+
+## 15. `sudo apt-get update`
+Updates the package list on the system.
+- **Usage**: `sudo apt-get update`
+- **Options**: None.
+
+## 16. `sudo apt-get install docker.io`
+Installs Docker from the Ubuntu package repository.
+- **Usage**: `sudo apt-get install [PACKAGE_NAME]`
+- **Example**: `sudo apt-get install docker.io`
+
+## 17. `docker --version`
+Displays the version of Docker installed.
+- **Usage**: `docker --version`
+- **Options**: None.
+
+## 18. `systemctl status docker`
+Shows the current status of the Docker service.
+- **Usage**: `systemctl status [SERVICE_NAME]`
+- **Example**: `systemctl status docker`
+
+## 19. `sudo usermod -aG docker ubuntu && newgrp docker`
+Adds the user `ubuntu` to the `docker` group and updates the current terminal session.
+- **Usage**: `sudo usermod -aG GROUP_NAME USER && newgrp GROUP_NAME`
+- **Example**: `sudo usermod -aG docker ubuntu && newgrp docker`
+
+## 20. `history`
+Displays the command history.
+- **Usage**: `history [n]`
+- **Options**: 
+  - `n`: Shows the last `n` commands.
+
+## 21. `docker run -d ubuntu:latest`
+Runs an Ubuntu container in detached mode using the latest image.
+- **Usage**: `docker run [OPTIONS] ubuntu:latest`
+- **Options**:
+  - `-d`: Detached mode.
+
+## 22. `docker run -dit ubuntu:latest`
+Runs an Ubuntu container interactively in detached mode.
+- **Usage**: `docker run [OPTIONS] ubuntu:latest`
+- **Options**:
+  - `-d`: Detached mode.
+  - `-it`: Interactive mode.
+
+## 23. `docker run Hello-World`
+Runs the `hello-world` Docker image to verify that Docker is installed correctly.
+- **Usage**: `docker run [OPTIONS] hello-world`
+- **Options**: None.
+
+## 24. `docker run hello-world`
+Runs the `hello-world` Docker image, similar to the previous command.
+- **Usage**: `docker run [OPTIONS] hello-world`
+- **Options**: None.
+
+## 25. `docker pull python:latest`
+Downloads the latest Python image from Docker Hub.
+- **Usage**: `docker pull python:latest`
+- **Options**: None.
+
+## 26. `docker run -d python:latest`
+Runs a Python container in detached mode using the latest image.
+- **Usage**: `docker run [OPTIONS] python:latest`
+- **Options**:
+  - `-d`: Detached mode.
+
+## 27. `docker run -d -e MYSQL_ROOT_PASSWORD=test@123 mysql:latest`
+Runs a MySQL container in detached mode with an environment variable setting the root password.
+- **Usage**: `docker run [OPTIONS] -e ENV_VAR=value IMAGE`
+- **Options**:
+  - `-d`: Detached mode.
+  - `-e`: Set environment variables.
+
+## 28. `docker exec -it dbf03c93b490`
+Executes a command inside the container with ID `dbf03c93b490`.
+- **Usage**: `docker exec -it CONTAINER COMMAND`
+- **Example**: `docker exec -it dbf03c93b490 bash`
+
+## 29. `docker exec -it dbf03c93b490 bash`
+Starts an interactive bash shell inside the container with ID `dbf03c93b490`.
+- **Usage**: `docker exec -it CONTAINER bash`
+- **Example**: `docker exec -it dbf03c93b490 bash`
+
+## 30. `docker run -d -e PYTHON_ROOT_PASSWORD=test@123 python:latest`
+Runs a Python container in detached mode, setting an environment variable for the root password.
+- **Usage**: `docker run [OPTIONS] -e ENV_VAR=value python:latest`
+- **Options**:
+  - `-d`: Detached mode.
+  - `-e`: Set environment variables.
+
+## 31. `docker exec -it 4561b55ec2d1 bash`
+Starts an interactive bash shell inside the container with ID `4561b55ec2d1`.
+- **Usage**: `docker exec -it CONTAINER bash`
+- **Example**: `docker exec -it 4561b55ec2d1 bash`
+
+## 32. `docker rm 4561b55ec2d1`
+Removes the stopped container with ID `4561b55ec2d1`.
+- **Usage**: `docker rm [OPTIONS] CONTAINER [CONTAINER...]`
+- **Example**: `docker rm 4561b55ec2d1`
+
+## 33. `docker stop 4561b55ec2d1`
+Stops the running container with ID `4561b55ec2d1`.
+- **Usage**: `docker stop [OPTIONS] CONTAINER [CONTAINER...]`
+- **Example**: `docker stop 4561b55ec2d1`
+
+## 34. `docker run -dit python:latest`
+Runs a Python container interactively in detached mode.
+- **Usage**: `docker run [OPTIONS] python:latest`
+- **Options**:
+  - `-d`: Detached mode.
+  - `-it`: Interactive mode.
+
+## 35. `docker exec -it 5923176b1d32 bash`
+Starts an interactive bash shell inside the container with ID `5923176b1d32`.
+- **Usage**: `docker exec -it CONTAINER bash`
+- **Example**: `docker exec -it 5923176b1d32 bash`
+
+## 36. `docker kill 3a57f1c9b189`
+Kills the running container with ID `3a57f1c9b189`.
+- **Usage**: `docker kill [OPTIONS] CONTAINER [CONTAINER...]`
+- **Example**: `docker kill 3a57f1c9b189
+
+## 36. `docker kill 3a57f1c9b189`
+Kills the running container with ID `3a57f1c9b189`.
+
+## 37. `docker rm 3a57f1c9b189`
+Removes the container with ID `3a57f1c9b189`.
+
+## 38. `docker run -d -p 80:80 nginx:latest`
+Runs an Nginx container, mapping port 80 of the container to port 80 on the host.
